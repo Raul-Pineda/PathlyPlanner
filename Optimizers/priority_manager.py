@@ -149,7 +149,7 @@ tasksSet4 = {
 # task_ids = list(pm.tasks.keys())
 # l1 = pm.quicksort_by_priority(task_ids)
 #print(l1)
-# Results: quicksort_by_priority() function works as expecte
+# Results: quicksort_by_priority() function works as expected
 
 
 # Notes:
