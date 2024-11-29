@@ -3,6 +3,8 @@ import { Container, TextField, Button, Typography, Box, List, ListItemButton, Li
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 type Task = {
     title: string;
@@ -17,6 +19,8 @@ type Task = {
     estimatedTime: string;
     type: 'event' | 'deadline';
 };
+
+const defaultTheme = createTheme();
 
 const App = () => {
     const [tasks, setTasks] = useState<Record<string, Task>>({});
