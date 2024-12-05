@@ -140,22 +140,15 @@ tasksSet4 = {
 }
 # Expected Output: [D3,D2,D1,E2,E1] - order of the 3 in the middle do not matter 
 
-# pm = PriorityManager(tasksSet1)
-# pm.boost_priorities()
-# for task_id, properties in pm.tasks.items():
-#     print(f"Task {task_id} : Priority {properties['priority']}")
+pm = PriorityManager(tasksSet1)
+pm.boost_priorities()
+for task_id, properties in pm.tasks.items():
+    print(f"Task {task_id} : Priority {properties['priority']}")
 # Results: boost_priorities() function works as expected
 
 
-# task_ids = list(pm.tasks.keys())
-# l1 = pm.quicksort_by_priority(task_ids)
-#print(l1)
+task_ids = list(pm.tasks.keys())
+l1 = pm.quicksort_by_priority(task_ids)
+print(l1)
 # Results: quicksort_by_priority() function works as expected
 
-
-# Notes:
-# At a glance, it looks functional; however, further testing is necessary to be certain. 
-# Queue Logic might not be properly setup/implemented
-
-# Code Does NOT:
-# Current implemention does NOT allow for Task data to come from another component which is expected. (10/30/2024), (11/2/2024)
